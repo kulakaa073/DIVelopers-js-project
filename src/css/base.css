@@ -16,7 +16,14 @@
   -webkit-text-size-adjust: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  font-family: Inter Tight, sans-serif;
+  color: #fafafa;
+  background-color: #1c1d20;
   display: flex;
   flex-direction: column;
   min-width: 100vw;
@@ -27,6 +34,39 @@ body {
 main {
   flex-grow: 1;
 }
+
 main:has(.back-link) {
   text-align: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  outline: 0;
+  outline-offset: 0;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -2%;
+  text-transform: uppercase;
+  color: #fafafa66;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -2%;
+  color: #fafafa;
 }
