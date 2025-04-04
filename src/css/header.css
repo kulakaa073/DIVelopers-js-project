@@ -25,7 +25,9 @@
 .header-burger-btn {
   background: none;
   border: none;
-  padding: 7px;
+  padding: 0;
+  width: 28px;
+  height: 28px;
   cursor: pointer;
   z-index: 1000;
 }
@@ -54,9 +56,7 @@
   }
 
   .order-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     border: 1px solid #0041e8;
     border-radius: 60px;
     width: 163px;
@@ -69,6 +69,7 @@
     letter-spacing: -0.02em;
     color: #fafafa;
     text-align: center;
+    line-height: 17px;
     white-space: nowrap;
     z-index: 1000;
   }
@@ -130,7 +131,7 @@
   .nav-link:hover {
     text-decoration: underline;
     cursor: pointer;
-    color: #01123b;
+    color: #0041e8;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -153,8 +154,8 @@
   height: 100%;
   opacity: 0;
   background-image: image-set(
-    url('/img/hero-cover-blue@1x.png') 1x,
-    url('/img/hero-cover-blue@2x.png') 2x
+    url('/img/modal-menu-blue@1x.png') 1x,
+    url('/img/modal-menu-blue@2x.png') 2x
   );
   background-repeat: no-repeat;
   background-position: center;
@@ -177,8 +178,6 @@
   cursor: pointer;
 }
 .close-modal-icon {
-  stroke: #fafafa;
-  fill: #fafafa;
   width: 28px;
   height: 28px;
   transition: stroke 0.3s ease;
@@ -211,14 +210,14 @@
 }
 .modal-nav-link:hover {
   cursor: pointer;
-  color: #01123b;
+  color: #0041e8;
 }
 .modal-order-btn {
   display: block;
   border: 1px solid #0041e8;
   border-radius: 60px;
   width: 164px;
-  height: 100%;
+  height: 45px;
   padding: 14px 31px;
   background-color: #0041e8;
   cursor: pointer;
@@ -227,7 +226,8 @@
   letter-spacing: -0.02em;
   color: #fafafa;
   text-align: center;
-  align-self: center;
+  line-height: 17px;
+  white-space: nowrap;
   margin-bottom: 64px;
 }
 .modal-order-btn:focus,
