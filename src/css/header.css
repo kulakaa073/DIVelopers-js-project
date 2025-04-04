@@ -134,7 +134,7 @@
     color: #0041e8;
   }
 }
-@media only screen and (min-width: 1428px) {
+@media only screen and (min-width: 1440px) {
   .header-nav {
     display: inline-flex;
     gap: 487px;
@@ -217,7 +217,7 @@
   border: 1px solid #0041e8;
   border-radius: 60px;
   width: 164px;
-  height: 100%;
+  height: 45px;
   padding: 14px 31px;
   background-color: #0041e8;
   cursor: pointer;
@@ -226,7 +226,8 @@
   letter-spacing: -0.02em;
   color: #fafafa;
   text-align: center;
-  align-self: center;
+  line-height: 17px;
+  white-space: nowrap;
   margin-bottom: 64px;
 }
 .modal-order-btn:focus,
