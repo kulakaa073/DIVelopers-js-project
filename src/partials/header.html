@@ -1,0 +1,59 @@
+<!--Header-->
+<header class="header">
+  <div class="container header-container">
+    <nav class="header-nav">
+      <a class="header-nav-logo" href="./index.html">
+        <img
+          class="header-logo-icon logo-icon-img"
+          srcset="/img/logo-image@1x.png, /img/logo-image@2x.png"
+          src="/img/logo-image@1x.png"
+          alt="logo"
+          width="80"
+          height="80"
+        />
+        <svg class="header-logo-icon logo-icon-text" width="84" height="19">
+          <use href="/img/sprites.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <div class="menu-container">
+        <button type="button" class="menu-btn">Menu</button>
+        <div class="submenu">
+          <ul class="nav-list">
+            <li><a href="#about" class="nav-link">About me</a></li>
+            <li><a href="#benefits" class="nav-link">Benefits</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#faq" class="nav-link">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <a class="order-btn" href="#work-together">Order the project</a>
+
+    <button id="openModal" class="header-burger-btn" type="button">
+      <svg class="header-burger-btn-icon" width="28" height="28">
+        <use href="/img/sprites.svg#icon-burger-menu"></use>
+      </svg>
+    </button>
+  </div>
+  <!--Modal-menu-->
+
+  <div class="modal-menu">
+    <button class="close-modal-menu" type="button">
+      <svg class="close-modal-icon" width="28" height="28">
+        <use href="/img/icon-close-menu.svg#icon-close-menu"></use>
+      </svg>
+    </button>
+
+    <div class="modal-submenu">
+      <nav class="modal-nav">
+        <ul class="modal-nav-list">
+          <li><a href="#about" class="modal-nav-link">About me</a></li>
+          <li><a href="#benefits" class="modal-nav-link">Benefits</a></li>
+          <li><a href="#projects" class="modal-nav-link">Projects</a></li>
+          <li><a href="#faq" class="modal-nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+      <a class="modal-order-btn" href="#work-together">Order the project</a>
+    </div>
+  </div>
+</header>

@@ -26,11 +26,7 @@ const swiperParams = {
     modules: [Navigation],
   loop: true,
   navigation: {
-    nextEl: '.swiper-button-next',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
+    nextEl: '.about-btn-next',
   },
   slidesPerView: 2,
   spaceBetween: 0,
