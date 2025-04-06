@@ -1,8 +1,4 @@
 .benefits {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
   padding: 64px 0;
 }
 
@@ -104,7 +100,6 @@
   }
 
   .benefits-container {
-    min-width: 1440px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
