@@ -23,14 +23,14 @@ new Accordion(".about-accordion-container", options);
 
 
 const swiperParams = {
-    modules: [Navigation],
+  modules: [Navigation],
   loop: true,
   navigation: {
     nextEl: '.about-btn-next',
   },
   slidesPerView: 2,
   spaceBetween: 0,
-   breakpoints: {
+  breakpoints: {
     320: {
       slidesPerView: 2,
       spaceBetween: 0
@@ -39,22 +39,21 @@ const swiperParams = {
       slidesPerView: 3,
       spaceBetween: 0
     },
-    1376: {
+    1440: {
       slidesPerView: 6,
       spaceBetween: 0
        },
     },
-   keyboard: {
-        enabled: true,
-        onlyInViewport: false,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
        },
-       mousewheel: {
+  mousewheel: {
     invert: true,
     },
     simulateTouch: true,
     touchRatio: 1,
     touchAngle: 45,
-    grabCursor: true, 
     allowTouchMove: true,
     threshold: 20,
 };
