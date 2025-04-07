@@ -1,9 +1,9 @@
 #about {
-  padding: 64px;
+  padding-top: 64px;
 }
 @media only screen and (min-width: 1440px) {
   #about {
-    padding: 96px;
+    padding-top: 96px;
   }
 }
 
@@ -231,6 +231,25 @@ li.about-panel-text {
   box-sizing: border-box;
 }
 
+.swiper {
+  width: calc(2 * 130px);
+  height: 130px;
+}
+
+@media only screen and (min-width: 768px) {
+  .swiper {
+    width: calc(3 * 200px);
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .swiper {
+    width: calc(6 * 200px);
+    height: 200px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .swiper.about-swiper {
     padding-right: 64px;
@@ -244,7 +263,8 @@ li.about-panel-text {
 }
 
 .about-swiper-wrapper {
-  max-width: 100%;
+  /* max-width: 100%; */
+  /* width: calc(2 * 130px); */
 }
 
 .swiper-wrapper .swiper-slide {

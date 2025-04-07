@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 
 const options = {
     duration: 400,
-    showMultiple: false,
+    showMultiple: true,
     ariaEnabled: true,
     collapse: true,
     elementClass: 'about-ac',
