@@ -175,9 +175,11 @@
 
 .about-ac-panel {
   overflow: hidden;
-  transition: max-height 0.4s ease-in-out;
   padding-top: 12px;
   margin-bottom: 32px;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 @media only screen and (min-width: 768px) {
@@ -192,7 +194,10 @@
     padding-right: 68px;
   }
 }
-
+.about-ac.is-active .about-ac-panel {
+  opacity: 1;
+  transform: translateY(0);
+}
 .is-active .about-ac-panel {
   overflow: visible;
 }
@@ -219,11 +224,29 @@ li.about-panel-text {
 }
 
 /* Swiper */
+.swiper.about-swiper {
+  position: relative;
+  overflow: hidden;
+  padding-right: 55px;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 768px) {
+  .swiper.about-swiper {
+    padding-right: 64px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .swiper.about-swiper {
+    padding-right: 72px;
+  }
+}
 
 .about-swiper-wrapper {
-  position: relative;
   max-width: 100%;
 }
+
 .swiper-wrapper .swiper-slide {
   display: flex;
   align-items: center;
@@ -257,12 +280,19 @@ li.about-panel-text {
   fill: #3b3b3b;
   width: 28px;
   height: 28px;
+  transition: fill 0.3s ease;
+}
+
+.swiper-btn-icon:hover,
+.swiper-btn-icon:focus,
+.swiper-btn-icon:active {
+  fill: #fafafa;
 }
 
 .about-btn-next {
   position: absolute;
   top: 50%;
-  right: 30px;
+  right: 0;
   transform: translateY(-50%);
   z-index: 10;
   background: none;
@@ -270,4 +300,12 @@ li.about-panel-text {
   cursor: pointer;
   width: 28px;
   height: 28px;
+}
+
+@media only screen and (min-width: 768px) {
+  .swiper-btn-icon,
+  .about-btn-next {
+    width: 40px;
+    height: 40px;
+  }
 }

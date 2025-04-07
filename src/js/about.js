@@ -43,19 +43,25 @@ const swiperParams = {
       slidesPerView: 6,
       spaceBetween: 0
        },
-    },
+  },
   keyboard: {
     enabled: true,
-    onlyInViewport: false,
+    onlyInViewport: true,
        },
   mousewheel: {
-    invert: true,
+    invert: false,
+    enabled: true,
+    forceToAxis: true,
     },
-    simulateTouch: true,
-    touchRatio: 1,
-    touchAngle: 45,
-    allowTouchMove: true,
-    threshold: 20,
+  simulateTouch: true,
+  touchRatio: 1,
+  touchAngle: 45,
+  allowTouchMove: true,
+  threshold: 20,
+  touchStartPreventDefault: false, 
+  touchMoveStopPropagation: true, 
+  touchRatio: 1, 
+  touchEventsTarget: '.swiper-wrapper',
 };
 
 const aboutSwiper = new Swiper('.about-swiper', swiperParams);
