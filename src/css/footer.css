@@ -1,6 +1,11 @@
+.no-scroll {
+    overflow: hidden;
+}
 .footer {
     padding-bottom: 32px;
     padding-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
 }
 @media only screen and (min-width: 768px) {
     .footer {
@@ -75,20 +80,25 @@
     font-family: "Inter Tight", sans-serif;
     box-sizing: border-box;
     padding-bottom: 20px;
+    border-color: rgba(250, 250, 250, 0.6);
     border-right: none;
     border-left: none;
     border-top: none;
+}
+.footer-input:hover {
+    color: #fafafa;
+    border-bottom-color: #fafafa;
 }
 @media only screen and (min-width: 768px) {
     .footer-input {
             width: 245px;
             padding-bottom: 20px;
+            margin-bottom: 78px;
     }
 }
 @media only screen and (min-width: 1440px) {
     .footer-input {
         width: 390px;
-        padding-bottom: 20px;
     }
 }
 .footer-comments {
@@ -121,6 +131,9 @@
     border: none;
     margin-bottom: 64px;
 }
+.footer-button:hover {
+    background-color: #E0373F;
+}
 @media only screen and (min-width: 768px) {
     .footer-button {
         width: 150px;
@@ -146,6 +159,9 @@
     border-radius: 60px;
     padding: 10px 12px;
 }
+.footer-address-li:hover {
+    border: 1px solid #fafafa;
+}
 @media only screen and (min-width: 768px) {
     .footer-address-li {
             padding: 18px 32px;
@@ -164,6 +180,7 @@
         }
 }
 .footer-modal-window {
+    display: none;
     background-color: rgba(46, 47, 66, 0.4);
     position: fixed;
     z-index: 999;
@@ -171,6 +188,9 @@
     left: 0;
     width: 100%;
     height: 100%;
+}
+.footer-modal-window.is-visible {
+    display: block;
 }
 .footer-modal {
     position: absolute;
