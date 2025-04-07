@@ -1,0 +1,81 @@
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.covers {
+  max-width: 1440px;
+  width: 100%;
+  height: 960px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.visually-hidden {
+}
+/* .covers-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px 20px;
+
+  position: relative;
+  perspective: 1000px;
+}
+@media only screen and (min-width: 768px) {
+  .covers-list {
+    gap: 48px 58px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .covers-list {
+    gap: 48px 40px;
+  }
+} */
+
+.covers-container {
+  position: relative;
+  width: 100%;
+  height: 960px;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(16deg);
+  width: 100%;
+  /* transform: rotate(16deg);  */
+}
+
+.carousel {
+  display: flex;
+  gap: 20px; /* Відстань між картками */
+  margin-bottom: 20px;
+  transition: transform 10s ease-in-out;
+}
+
+.carousel-from-start {
+  top: 0;
+  left: 0;
+}
+.carousel-from-end {
+  top: 334px;
+  left: 0;
+}
+
+.slide {
+  /* flex: 0 0 calc(100% / 3 - 20px); */
+  /* 3 картки вміщуються одночасно */
+  flex: 0 0 544px;
+  height: 314px;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border-radius: 10px;
+}
+
+.carousel-from-start-2 .slide {
+  background: tomato;
+}
