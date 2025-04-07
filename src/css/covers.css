@@ -1,22 +1,3 @@
-/* .covers-list {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 24px 20px;
-
-  position: relative;
-  perspective: 1000px;
-}
-@media only screen and (min-width: 768px) {
-  .covers-list {
-    gap: 48px 58px;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .covers-list {
-    gap: 48px 40px;
-  }
-} */
-
 .covers {
   height: 508px;
 }
@@ -30,23 +11,35 @@
   position: relative;
   height: 100%;
   overflow: hidden;
-
-  backdrop-filter: blur(30px);
-  background: linear-gradient(
-    -60deg,
-    #1c1d20 49.68%,
-    #1e3633 67.73%,
-    #2b4441 100%
-  );
+  background-image: url(./../img/cover-background.png);
+  background-size: 1108px 784px;
+  background-position: bottom -169px right -250px;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 768px) {
+  .covers-container {
+    background-size: 1288px 1004px;
+    background-position: bottom 71px right -150px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .covers-container {
+    background-size: 1528px 1064px;
+    background-position: bottom -55px left 171px;
+  }
 }
 
 .carousel-wrapper {
   position: absolute;
   left: 0;
-  /* top: 50%; */
   top: calc(50% - 24px);
   transform: translateY(-50%) rotate(17deg);
   width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .carousel-wrapper {
+    top: calc(50% - 43px);
+  }
 }
 
 .carousel {
