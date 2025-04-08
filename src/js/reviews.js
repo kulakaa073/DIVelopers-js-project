@@ -1,9 +1,12 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import { Keyboard, Navigation } from 'swiper/modules';
 
 const reviewsUrl = 'https://portfolio-js.b.goit.study/api/reviews';
 const reviewsList = document.querySelector('.reviews-list');
 let reviewsLoaded = false;
+
+Swiper.use([Navigation, Keyboard]);
 
 const reviewsSwiper = new Swiper('.reviews-swiper', {
   slidesPerView: 1,
@@ -14,13 +17,40 @@ const reviewsSwiper = new Swiper('.reviews-swiper', {
     nextEl: '.swiper-btn-next',
     prevEl: '.swiper-btn-prev',
   },
-
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
   breakpoints: {
     768: {
       slidesPerView: 2,
     },
     1440: {
       slidesPerView: 4,
+    },
+  },
+
+  on: {
+    slideChange: function () {
+      const prevButton = document.querySelector('.swiper-btn-prev');
+      const nextButton = document.querySelector('.swiper-btn-next');
+
+      if (reviewsSwiper.isBeginning) {
+        prevButton.classList.add('swiper-button-disabled');
+        prevButton.classList.remove('swiper-button-active');
+        nextButton.classList.remove('swiper-button-disabled');
+        nextButton.classList.add('swiper-button-active');
+      } else if (reviewsSwiper.isEnd) {
+        nextButton.classList.add('swiper-button-disabled');
+        nextButton.classList.remove('swiper-button-active');
+        prevButton.classList.remove('swiper-button-disabled');
+        prevButton.classList.add('swiper-button-active');
+      } else {
+        prevButton.classList.remove('swiper-button-disabled');
+        prevButton.classList.add('swiper-button-active');
+        nextButton.classList.remove('swiper-button-disabled');
+        nextButton.classList.add('swiper-button-active');
+      }
     },
   },
 });
@@ -54,6 +84,8 @@ function renderReviews(reviews) {
     )
     .join('');
   reviewsList.innerHTML = markup;
+
+  reviewsSwiper.update();
 }
 
 function showFallback() {
