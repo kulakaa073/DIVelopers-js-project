@@ -2,10 +2,41 @@
     overflow: hidden;
 }
 .footer {
+    position: relative;
     padding-bottom: 32px;
     padding-top: 32px;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
+}
+.footer-gradient {
+    position: absolute;
+    top: 0;
+    width: 728px;
+    height: 679px;
+    left: 290px;
+    position: none;
+    z-index: 1;
+    background-image: url(../img/work-together@1x.png);
+}
+@media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .footer-gradient {
+            background-image: url(../img/work-together@2x.png);
+        }
+}
+@media only screen and (min-width: 768px) {
+    .footer-gradient {
+            left: 570px;
+        }
+}
+@media only screen and (min-width: 1440px) {
+    .footer-gradient {
+        left: 1040px;
+    }
+}
+.footer-container {
+    position: relative;
+    z-index: 2;
 }
 @media only screen and (min-width: 768px) {
     .footer {
@@ -92,7 +123,6 @@
 @media only screen and (min-width: 768px) {
     .footer-input {
             width: 245px;
-            padding-bottom: 20px;
             margin-bottom: 78px;
     }
 }
@@ -100,6 +130,31 @@
     .footer-input {
         width: 390px;
     }
+}
+.footer-div {
+    position: relative;
+}
+.footer-succes {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.28571;
+    letter-spacing: -0.02em;
+    color: #3cbc81;
+    font-family: "Inter Tight", sans-serif;
+    position: absolute;
+    top: 48px;
+    display: none;
+}
+.footer-invalid-email {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.28571;
+    letter-spacing: -0.02em;
+    color: #e74a3b;
+    font-family: "Inter Tight", sans-serif;
+    position: absolute;
+    top: 48px;
+    display: none;
 }
 .footer-comments {
     margin-top: 16px;
