@@ -68,7 +68,7 @@
     color: rgba(250, 250, 250, 0.6);
 }
 
-/* button reviews */
+/* rewiews buttons */
 .reviews-buttons {
   display: flex;
   justify-content: center;
@@ -96,7 +96,6 @@
   transition: 400ms;
 }
 
-/* Подсветка кнопок по умолчанию */
 .swiper-btn-next {
   opacity: 1;
 }
@@ -105,34 +104,28 @@
   opacity: 0.2;
 }
 
-/* При ховере кнопки становятся ярче */
 .swiper-btn-next:hover,
 .swiper-btn-prev:hover {
   opacity: 1;
 }
 
-/* Стили для неактивной правой кнопки */
 .swiper-btn-next.swiper-button-disabled {
   opacity: 0.2;
 }
 
-/* Стили для неактивной левой кнопки */
 .swiper-btn-prev.swiper-button-disabled {
   opacity: 0.2;
 }
 
-/* Когда слайдер на первом слайде, левая кнопка активна */
 .swiper-btn-prev.swiper-button-active {
   opacity: 1;
 }
 
-/* Когда слайдер на последнем слайде, правая кнопка активна */
 .swiper-btn-next.swiper-button-active {
   opacity: 1;
 }
 
-
-/* reviews(error) */
+/* rewies error */
 .reviews-placeholder {
   font-size: 24px;
   color: #999;
