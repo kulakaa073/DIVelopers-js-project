@@ -13,7 +13,7 @@
     <script type="module" crossorigin src="/DIVelopers-js-project/index.js"></script>
     <link rel="modulepreload" crossorigin href="/DIVelopers-js-project/assets/vendor-CkB2Yy-u.js">
     <link rel="stylesheet" crossorigin href="/DIVelopers-js-project/assets/vendor-BeNFBzCw.css">
-    <link rel="stylesheet" crossorigin href="/DIVelopers-js-project/assets/index-BgNa_XDQ.css">
+    <link rel="stylesheet" crossorigin href="/DIVelopers-js-project/assets/index-BtUytJDT.css">
   </head>
   <body>
     <!--Header-->
@@ -45,7 +45,12 @@
     </nav>
     <a class="order-btn" href="#work-together">Order the project</a>
 
-    <button id="openModal" class="header-burger-btn" type="button">
+    <button
+      id="openModal"
+      class="header-burger-btn"
+      type="button"
+      aria-label="Navigation menu"
+    >
       <svg class="header-burger-btn-icon" width="28" height="28">
         <use href="/DIVelopers-js-project/assets/sprites-BHGwDMeo.svg#icon-burger-menu"></use>
       </svg>
@@ -55,7 +60,7 @@
 
 <!--Modal-menu-->
 <div class="modal-menu">
-  <button class="close-modal-menu" type="button">
+  <button class="close-modal-menu" type="button" aria-label="Close menu">
     <svg class="close-menu-icon" width="28" height="28">
       <use href="/DIVelopers-js-project/assets/sprites-BHGwDMeo.svg#icon-close-x"></use>
     </svg>
@@ -142,18 +147,18 @@
       <picture class="about-img">
         <source
           media="(min-width: 1376px)"
-          srcset="/DIVelopers-js-project/assets/about-1-image-desctop@1x-CMIaXLew.png 1x, /DIVelopers-js-project/assets/about-1-image-desctop@2x-DmARMhv1.png 2x"
+          srcset="/DIVelopers-js-project/assets/about-1-image-tablet@1x-Bi5dgxsR.png 1x, /DIVelopers-js-project/assets/about-1-image-tablet@2x-DJVrvIwN.png 2x"
         />
         <source
           media="(min-width: 768px)"
-          srcset="/DIVelopers-js-project/assets/about-1-image-tablet@1x-JWQV3ZgO.png 1x, /DIVelopers-js-project/assets/about-1-image-tablet@2x-DZ_XU1yA.png 2x"
+          srcset="/DIVelopers-js-project/assets/about-1-image-tablet@1x-Bi5dgxsR.png 1x, /DIVelopers-js-project/assets/about-1-image-tablet@2x-DJVrvIwN.png 2x"
         />
         <source
           media="(min-width: 320px)"
-          srcset="/DIVelopers-js-project/assets/about-1-image-mobile@1x-CxSPeUxy.png 1x, /DIVelopers-js-project/assets/about-1-image-mobile@2x-BmpVqe1d.png 2x"
+          srcset="/DIVelopers-js-project/assets/about-1-image-mobile@1x-3ImwQNBL.png 1x, /DIVelopers-js-project/assets/about-1-image-mobile@2x-BZM9U3VC.png 2x"
         />
         <img
-          src="/DIVelopers-js-project/assets/about-1-image-mobile@1x-CxSPeUxy.png"
+          src="/DIVelopers-js-project/assets/about-1-image-mobile@1x-3ImwQNBL.png"
           alt="Lloyd Jefferson's photo"
         />
       </picture>
@@ -162,7 +167,11 @@
       <li class="about-ac">
         <h2 class="about-ac-header">
           About me
-          <button type="button" class="about-ac-trigger">
+          <button
+            type="button"
+            class="about-ac-trigger"
+            aria-label="unfold About Me info"
+          >
             <svg class="ac-btn-icon">
               <use href="/DIVelopers-js-project/assets/sprites-BHGwDMeo.svg#icon-arrow-down"></use>
             </svg>
@@ -195,22 +204,30 @@
       <li class="about-ac">
         <h2 class="about-ac-header">
           Role
-          <button type="button" class="about-ac-trigger">
+          <button
+            type="button"
+            class="about-ac-trigger"
+            aria-label="unfold My roles info"
+          >
             <svg class="ac-btn-icon">
               <use href="/DIVelopers-js-project/assets/sprites-BHGwDMeo.svg#icon-arrow-down"></use>
             </svg>
           </button>
         </h2>
         <ul class="about-ac-panel">
-          <li class="about-panel-text">Frontend development</li>
-          <li class="about-panel-text">HeadlessCMS,Wordpress</li>
-          <li class="about-panel-text">Blender(enjoy)</li>
+          <li class="about-panel-text"><p>Frontend development</p></li>
+          <li class="about-panel-text"><p>HeadlessCMS,Wordpress</p></li>
+          <li class="about-panel-text"><p>Blender(enjoy)</p></li>
         </ul>
       </li>
       <li class="about-ac">
         <h2 class="about-ac-header">
           Education
-          <button type="button" class="about-ac-trigger">
+          <button
+            type="button"
+            class="about-ac-trigger"
+            aria-label="unfold My education info"
+          >
             <svg class="ac-btn-icon">
               <use href="/DIVelopers-js-project/assets/sprites-BHGwDMeo.svg#icon-arrow-down"></use>
             </svg>
@@ -218,14 +235,19 @@
         </h2>
         <ul class="about-ac-panel">
           <li class="about-panel-text">
-            2018 - 2019 / Frontend Development Diploma, GoIT IT School, New York
+            <p>
+              2018 - 2019 / Frontend Development Diploma, GoIT IT School, New
+              York
+            </p>
           </li>
           <li class="about-panel-text">
-            2019 - 2020 / Advanced Web Development Certificate, GoIT IT School,
-            New York
+            <p>
+              2019 - 2020 / Advanced Web Development Certificate, GoIT IT
+              School, New York
+            </p>
           </li>
           <li class="about-panel-text">
-            2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+            <p>2020 - 2022 / Advanced Blender Animation Techniques, Udemy</p>
           </li>
         </ul>
       </li>
@@ -243,7 +265,7 @@
           <li class="about-slide" tabindex="0">Soft skills</li>
         </ul>
       </div>
-      <button type="button" class="about-btn-next">
+      <button type="button" class="about-btn-next" aria-label="next slide">
         <svg class="swiper-btn-icon">
           <use href="/DIVelopers-js-project/assets/sprites-BHGwDMeo.svg#icon-arrow-right"></use>
         </svg>
