@@ -117,10 +117,6 @@
     transform: rotate(180deg);
 }
 
-.no-border-bottom {
-    border-bottom: none;
-}
-
 .ac.is-active .faq-acc-icon {
     transform: rotate(180deg);
     transition: transform 0.3s ease-out;
