@@ -59,7 +59,7 @@ form.addEventListener('submit', async (e) => {
   const formData = { email, comment };
 
   try {
-    const response = await fetch('', {
+    const response = await fetch('https://portfolio-js.b.goit.study/api/requests', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
