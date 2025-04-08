@@ -2,7 +2,7 @@ import Accordion from "accordion-js";
 import "accordion-js/dist/accordion.min.css";
 
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -21,6 +21,7 @@ const options = {
 
 new Accordion(".about-accordion-container", options);
 
+Swiper.use([Navigation, Keyboard]);
 
 const swiperParams = {
   modules: [Navigation],
@@ -47,6 +48,7 @@ const swiperParams = {
   keyboard: {
     enabled: true,
     onlyInViewport: true,
+    pageUpDown: true, 
        },
   mousewheel: {
     invert: false,
@@ -60,7 +62,6 @@ const swiperParams = {
   threshold: 20,
   touchStartPreventDefault: false, 
   touchMoveStopPropagation: true, 
-  touchRatio: 1, 
   touchEventsTarget: '.swiper-wrapper',
 };
 
