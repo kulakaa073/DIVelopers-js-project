@@ -1,0 +1,117 @@
+.hero-container {
+  position: relative;
+  padding-top: 281px;
+  padding-bottom: 281px;
+  background-image: url(../img/hero-cover-blue-mobile@1x.png);
+  background-position: right 65px top;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-container {
+    padding-top: 300px;
+    padding-bottom: 274px;
+    background-image: url(../img/hero-cover-blue-tablet@1x.png);
+    background-position: right 187px top;
+  }
+
+  @media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero-container {
+      background-image: url(../img/hero-cover-blue-tablet@2x.png);
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero-container {
+    padding: 300px 178px 330px;
+    background-image: url(../img/hero-cover-blue@1x.png);
+    background-position: left top;
+  }
+
+  @media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero-container {
+      background-image: url(../img/hero-cover-blue@2x.png);
+    }
+  }
+}
+
+.hero-title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: -3%;
+  text-transform: uppercase;
+  color: #fafafa;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-title {
+    font-size: 90px;
+  }
+}
+
+.socials {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  bottom: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .socials {
+    gap: 8px;
+    right: 32px;
+  }
+}
+
+.socials > li {
+  width: 37px;
+  height: 37px;
+  background-color: transparent;
+  text-align: center;
+  padding: 10px 0;
+  border: 1px solid #fafafa33;
+  border-radius: 60px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -2%;
+  color: #fafafa;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .socials > li {
+    width: 55px;
+    height: 55px;
+    font-size: 16px;
+    padding: 18px 0;
+  }
+}
+
+.socials li:hover,
+.socials li:focus {
+  border: 1px solid #fafafa;
+}
+
+.socials li:last-child {
+  padding: 10px 12px;
+  width: unset;
+}
+
+@media screen and (min-width: 768px) {
+  .socials > li {
+    width: 55px;
+    height: 55px;
+    font-size: 16px;
+    padding: 18px 0;
+  }
+
+  .socials li:last-child {
+    padding: 18px 24px;
+    width: unset;
+  }
+}
