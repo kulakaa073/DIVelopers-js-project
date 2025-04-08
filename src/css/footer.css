@@ -286,14 +286,8 @@
     font-family: "Inter Tight", sans-serif;
     margin-top: 16px;
 }
-.footer-close {
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
 .close-modal-icon {
+    flex-shrink: 0;
     height: 11px;
     width: 11px;
 }
@@ -304,6 +298,12 @@
         }
 }
 .footer-close {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
     height: 22px;
     width: 22px;
     display: flex;
