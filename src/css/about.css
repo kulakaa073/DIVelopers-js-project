@@ -231,35 +231,36 @@ li.about-panel-text {
   width: 100%;
 }
 
-.swiper.about-swiper {
+.about-swiper {
+  overflow: hidden;
   margin: 0;
 }
 
-.swiper.about-swiper {
+.about-swiper {
   width: calc(2 * 130px);
   height: 130px;
 }
 
 @media only screen and (min-width: 768px) {
-  .swiper.about-swiper {
+  .about-swiper {
     width: calc(3 * 200px);
     height: 200px;
   }
 }
 
 @media only screen and (min-width: 1440px) {
-  .swiper.about-swiper {
+  .about-swiper {
     width: calc(6 * 200px);
   }
 }
 
-.swiper-wrapper .about-slide {
+.about-slide {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.about-slide.swiper-slide {
+.about-slide {
   aspect-ratio: 1 / 1;
   width: 130px;
   height: 130px;
@@ -271,7 +272,7 @@ li.about-panel-text {
 }
 
 @media only screen and (min-width: 768px) {
-  .about-slide.swiper-slide {
+  .about-slide {
     width: 200px;
     height: 200px;
     font-size: 20px;
@@ -314,4 +315,9 @@ li.about-panel-text {
     width: 40px;
     height: 40px;
   }
+}
+
+.about-swiper-wrapper {
+  display: flex;
+  flex-direction: row;
 }

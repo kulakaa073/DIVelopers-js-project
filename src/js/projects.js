@@ -1,37 +1,62 @@
-const swiper = new Swiper('.swiper', {
+import { Keyboard, Navigation } from 'swiper/modules';
+Swiper.use([Navigation, Keyboard]);
+
+const reviewSwiper = new Swiper('.swiper', {
   slidesPerView: 1,
   spaceBetween: 30,
+  direction: 'horizontal',
   navigation: {
-    nextEl: '.proj-swiper-button-next',
     prevEl: '.proj-swiper-button-prev',
+    nextEl: '.proj-swiper-button-next',
   },
   keyboard: {
     enabled: true,
+    onlyInViewport: true,
   },
+  watchOverflow: false,
   on: {
-    init: function () {
-      toggleButtons(this);
-    },
     slideChange: function () {
-      toggleButtons(this);
+      const prevButton = document.querySelector('.proj-swiper-button-prev');
+      const nextButton = document.querySelector('.proj-swiper-button-next');
+
+      if (reviewSwiper.isBeginning) {
+        prevButton.classList.add('swiper-button-disabled');
+        prevButton.classList.remove('swiper-button-active');
+        nextButton.classList.remove('swiper-button-disabled');
+        nextButton.classList.add('swiper-button-active');
+      } else if (reviewSwiper.isEnd) {
+        nextButton.classList.add('swiper-button-disabled');
+        nextButton.classList.remove('swiper-button-active');
+        prevButton.classList.remove('swiper-button-disabled');
+        prevButton.classList.add('swiper-button-active');
+      } else {
+        prevButton.classList.remove('swiper-button-disabled');
+        prevButton.classList.add('swiper-button-active');
+        nextButton.classList.remove('swiper-button-disabled');
+        nextButton.classList.add('swiper-button-active');
+      }
     },
   },
 });
 
-function toggleButtons(swiper) {
-  const prevBtn = document.querySelector('.proj-swiper-button-prev');
-  const nextBtn = document.querySelector('.proj-swiper-button-next');
+/* function toggleButtons() {
+  const prevButton = document.querySelector('.proj-swiper-button-prev');
+  const nextButton = document.querySelector('.proj-swiper-button-next');
 
-  prevBtn.classList.toggle('swiper-button-disabled', swiper.isBeginning);
-  nextBtn.classList.toggle('swiper-button-disabled', swiper.isEnd);
-
-  prevBtn.disabled = swiper.isBeginning;
-  nextBtn.disabled = swiper.isEnd;
-
-  /* prevBtn.removeAttribute('disabled');
-  nextBtn.removeAttribute('disabled');
-  prevBtn.setAttribute('aria-disabled', 'false');
-  nextBtn.setAttribute('aria-disabled', 'false');
-  prevBtn.classList.remove('swiper-button-lock');
-  nextBtn.classList.remove('swiper-button-lock'); */
-}
+  if (reviewSwiper.isBeginning) {
+    prevButton.classList.add('swiper-button-disabled');
+    prevButton.classList.remove('swiper-button-active');
+    nextButton.classList.remove('swiper-button-disabled');
+    nextButton.classList.add('swiper-button-active');
+  } else if (reviewSwiper.isEnd) {
+    nextButton.classList.add('swiper-button-disabled');
+    nextButton.classList.remove('swiper-button-active');
+    prevButton.classList.remove('swiper-button-disabled');
+    prevButton.classList.add('swiper-button-active');
+  } else {
+    prevButton.classList.remove('swiper-button-disabled');
+    prevButton.classList.add('swiper-button-active');
+    nextButton.classList.remove('swiper-button-disabled');
+    nextButton.classList.add('swiper-button-active');
+  }
+} */
