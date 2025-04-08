@@ -26,6 +26,7 @@
 
 .reviews-list{
     display: flex;
+    margin-bottom: 32px;
 }
 
 .reviews-item{
@@ -68,26 +69,68 @@
 }
 
 /* button reviews */
-.reviews-buttons{
+.reviews-buttons {
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin-top: 32px;
+}
+
+.swiper-btn-prev,
+.swiper-btn-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-icon {
+  fill: #fafafa;
 }
 
 .swiper-btn-next,
-.swiper-btn-prev{
-    border: 1px solid rgba(250, 250, 250, 0.5);
-    border-radius: 60px;
-    padding: 14px;
-    width: 52px;
-    height: 52px;
-    transition: 400ms;
+.swiper-btn-prev {
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  border-radius: 60px;
+  padding: 14px;
+  width: 52px;
+  height: 52px;
+  transition: 400ms;
 }
 
-:is(.swiper-btn-next, .swiper-btn-prev):is(:not(:hover), .swiper-button-disabled){
-   opacity: 0.2;
+/* Подсветка кнопок по умолчанию */
+.swiper-btn-next {
+  opacity: 1;
 }
+
+.swiper-btn-prev {
+  opacity: 0.2;
+}
+
+/* При ховере кнопки становятся ярче */
+.swiper-btn-next:hover,
+.swiper-btn-prev:hover {
+  opacity: 1;
+}
+
+/* Стили для неактивной правой кнопки */
+.swiper-btn-next.swiper-button-disabled {
+  opacity: 0.2;
+}
+
+/* Стили для неактивной левой кнопки */
+.swiper-btn-prev.swiper-button-disabled {
+  opacity: 0.2;
+}
+
+/* Когда слайдер на первом слайде, левая кнопка активна */
+.swiper-btn-prev.swiper-button-active {
+  opacity: 1;
+}
+
+/* Когда слайдер на последнем слайде, правая кнопка активна */
+.swiper-btn-next.swiper-button-active {
+  opacity: 1;
+}
+
 
 /* reviews(error) */
 .reviews-placeholder {

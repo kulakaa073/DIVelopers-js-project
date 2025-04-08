@@ -23,6 +23,35 @@ const reviewsSwiper = new Swiper('.reviews-swiper', {
       slidesPerView: 4,
     },
   },
+
+  on: {
+    slideChange: function () {
+      const prevButton = document.querySelector('.swiper-btn-prev');
+      const nextButton = document.querySelector('.swiper-btn-next');
+
+      // Если на первом слайде
+      if (reviewsSwiper.isBeginning) {
+        prevButton.classList.add('swiper-button-disabled');
+        prevButton.classList.remove('swiper-button-active');
+        nextButton.classList.remove('swiper-button-disabled');
+        nextButton.classList.add('swiper-button-active');
+      }
+      // Если на последнем слайде
+      else if (reviewsSwiper.isEnd) {
+        nextButton.classList.add('swiper-button-disabled');
+        nextButton.classList.remove('swiper-button-active');
+        prevButton.classList.remove('swiper-button-disabled');
+        prevButton.classList.add('swiper-button-active');
+      }
+      // Если слайдер находится не на первом или последнем слайде
+      else {
+        prevButton.classList.remove('swiper-button-disabled');
+        prevButton.classList.add('swiper-button-active');
+        nextButton.classList.remove('swiper-button-disabled');
+        nextButton.classList.add('swiper-button-active');
+      }
+    },
+  },
 });
 
 async function getReviews() {
@@ -54,6 +83,9 @@ function renderReviews(reviews) {
     )
     .join('');
   reviewsList.innerHTML = markup;
+
+  // Перезапускаем слайдер после добавления отзывов
+  reviewsSwiper.update();
 }
 
 function showFallback() {
