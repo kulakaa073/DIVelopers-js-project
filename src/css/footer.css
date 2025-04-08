@@ -2,71 +2,37 @@
   overflow: hidden;
 }
 .footer {
-  position: relative;
-  padding-bottom: 32px;
-  padding-top: 32px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
+    background-image: url(../img/work-together@1x.png);
+    background-position: 290px 0;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
 }
-.footer-gradient {
-  position: absolute;
-  top: 0;
-  width: 728px;
-  height: 679px;
-  left: 290px;
-  position: none;
-  z-index: 1;
-  background-image: url(../img/work-together@1x.png);
-}
-@media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .footer-gradient {
-    background-image: url(../img/work-together@2x.png);
-  }
+@media screen and (min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .footer {
+        background-image: url(../img/work-together@2x.png);
+    }
 }
 @media only screen and (min-width: 768px) {
-  .footer-gradient {
-    left: 570px;
-  }
+    .footer {
+        padding-bottom: 169px;
+        padding-top: 80px;
+        background-position: 570px 0;
+    }
 }
 @media only screen and (min-width: 1440px) {
-  .footer-gradient {
-    left: 1040px;
-  }
-}
-.footer-container {
-  position: relative;
-  z-index: 2;
-}
-@media only screen and (min-width: 768px) {
-  .footer {
-    padding-bottom: 169px;
-    padding-top: 80px;
-  }
-}
-.footer-text {
-  display: none;
-}
-.footer-p {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  color: #fafafa;
-  font-family: 'Inter Tight', sans-serif;
-}
-@media only screen and (min-width: 768px) {
-  .footer-p {
-    font-size: 64px;
-  }
+    .footer {
+        background-position: 1040px 0;
+    }
 }
 .footer-span {
   color: #0041e8;
 }
 .footer-icon {
+  margin-right: 10px;  
   width: 44px;
   height: 44px;
   border-radius: 12px;
@@ -79,10 +45,26 @@
   }
 }
 .footer-img-text {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
+    flex-wrap: wrap;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 4px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #fafafa;
+    font-family: 'Inter Tight', sans-serif;
+
 }
+@media only screen and (min-width: 768px) {
+    .footer-img-text {
+        font-size: 64px;
+        max-width: 500px;
+    }
+}    
 .footer-form {
   margin-top: 63px;
   display: flex;
@@ -157,17 +139,17 @@
   top: 48px;
   display: none;
 }
-.footer-comments {
+.footer-comments-div {
   margin-top: 16px;
   margin-bottom: 32px;
 }
 @media only screen and (min-width: 768px) {
-  .footer-comments {
+  .footer-comments-div {
     margin: 0 32px;
   }
 }
 @media only screen and (min-width: 1440px) {
-  .footer-comments {
+  .footer-comments-div {
     margin-right: 86px;
   }
 }
