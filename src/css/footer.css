@@ -288,13 +288,13 @@
 }
 .close-modal-icon {
     flex-shrink: 0;
-    height: 11px;
-    width: 11px;
+    height: 22px;
+    width: 22px;
 }
 @media only screen and (min-width: 768px) {
     .close-modal-icon {
-            height: 12px;
-            width: 12px;
+            height: 24px;
+            width: 24px;
         }
 }
 .footer-close {
@@ -304,15 +304,4 @@
     top: 20px;
     right: 20px;
     cursor: pointer;
-    height: 22px;
-    width: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-@media only screen and (min-width: 768px) {
-    .footer-close {
-            height: 24px;
-            width: 24px;
-        }
 }
