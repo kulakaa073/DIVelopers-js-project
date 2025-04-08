@@ -42,7 +42,11 @@
       <li class="about-ac">
         <h2 class="about-ac-header">
           About me
-          <button type="button" class="about-ac-trigger">
+          <button
+            type="button"
+            class="about-ac-trigger"
+            aria-label="unfold About Me info"
+          >
             <svg class="ac-btn-icon">
               <use href="img/sprites.svg#icon-arrow-down"></use>
             </svg>
@@ -75,22 +79,30 @@
       <li class="about-ac">
         <h2 class="about-ac-header">
           Role
-          <button type="button" class="about-ac-trigger">
+          <button
+            type="button"
+            class="about-ac-trigger"
+            aria-label="unfold My roles info"
+          >
             <svg class="ac-btn-icon">
               <use href="img/sprites.svg#icon-arrow-down"></use>
             </svg>
           </button>
         </h2>
         <ul class="about-ac-panel">
-          <li class="about-panel-text">Frontend development</li>
-          <li class="about-panel-text">HeadlessCMS,Wordpress</li>
-          <li class="about-panel-text">Blender(enjoy)</li>
+          <li class="about-panel-text"><p>Frontend development</p></li>
+          <li class="about-panel-text"><p>HeadlessCMS,Wordpress</p></li>
+          <li class="about-panel-text"><p>Blender(enjoy)</p></li>
         </ul>
       </li>
       <li class="about-ac">
         <h2 class="about-ac-header">
           Education
-          <button type="button" class="about-ac-trigger">
+          <button
+            type="button"
+            class="about-ac-trigger"
+            aria-label="unfold My education info"
+          >
             <svg class="ac-btn-icon">
               <use href="img/sprites.svg#icon-arrow-down"></use>
             </svg>
@@ -98,14 +110,19 @@
         </h2>
         <ul class="about-ac-panel">
           <li class="about-panel-text">
-            2018 - 2019 / Frontend Development Diploma, GoIT IT School, New York
+            <p>
+              2018 - 2019 / Frontend Development Diploma, GoIT IT School, New
+              York
+            </p>
           </li>
           <li class="about-panel-text">
-            2019 - 2020 / Advanced Web Development Certificate, GoIT IT School,
-            New York
+            <p>
+              2019 - 2020 / Advanced Web Development Certificate, GoIT IT
+              School, New York
+            </p>
           </li>
           <li class="about-panel-text">
-            2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+            <p>2020 - 2022 / Advanced Blender Animation Techniques, Udemy</p>
           </li>
         </ul>
       </li>
@@ -123,7 +140,7 @@
           <li class="about-slide" tabindex="0">Soft skills</li>
         </ul>
       </div>
-      <button type="button" class="about-btn-next">
+      <button type="button" class="about-btn-next" aria-label="next slide">
         <svg class="swiper-btn-icon">
           <use href="img/sprites.svg#icon-arrow-right"></use>
         </svg>
