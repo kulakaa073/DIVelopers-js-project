@@ -32,6 +32,13 @@
   padding: 32px;
   margin-bottom: 16px;
 }
+
+@media screen and (max-width: 374px) {
+  .about-summary-card {
+    min-width: 0;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .about-summary-card {
     max-width: 704px;
@@ -44,6 +51,12 @@
   min-width: 343px;
   min-height: 500px;
   display: block;
+}
+
+@media screen and (max-width: 374px) {
+  .about-img {
+    min-width: 0;
+  }
 }
 
 .about-img img {
