@@ -1,5 +1,5 @@
 .benefits {
-  padding: 64px 0;
+  padding: 64px 0 0 0;
 }
 
 .benefits-header {
@@ -86,7 +86,7 @@
 
 @media screen and (min-width: 768px) {
   .benefits {
-    padding: 96px 0;
+    padding: 96px 0 0 0;
   }
   .benefits-list {
     grid-template-columns: 1fr 1fr;
@@ -96,7 +96,7 @@
 
 @media screen and (min-width: 1440px) {
   .benefits {
-    padding: 164px 0;
+    padding: 164px 0 0 0;
   }
 
   .benefits-container {

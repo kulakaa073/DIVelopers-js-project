@@ -1,14 +1,14 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import Swiper from 'swiper';
 import { Keyboard, Navigation } from 'swiper/modules';
 
 const reviewsUrl = 'https://portfolio-js.b.goit.study/api/reviews';
 const reviewsList = document.querySelector('.reviews-list');
 let reviewsLoaded = false;
 
-Swiper.use([Navigation, Keyboard]);
-
 const reviewsSwiper = new Swiper('.reviews-swiper', {
+  modules: [Navigation, Keyboard],
   slidesPerView: 1,
   spaceBetween: 16,
   direction: 'horizontal',

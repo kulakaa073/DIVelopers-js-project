@@ -1,7 +1,8 @@
+import Swiper from 'swiper';
 import { Keyboard, Navigation } from 'swiper/modules';
-Swiper.use([Navigation, Keyboard]);
 
-const reviewSwiper = new Swiper('.swiper', {
+const reviewSwiper = new Swiper('.projects-swiper', {
+  modules: [Navigation, Keyboard],
   slidesPerView: 1,
   spaceBetween: 30,
   direction: 'horizontal',

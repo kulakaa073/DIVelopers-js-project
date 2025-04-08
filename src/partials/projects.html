@@ -1,8 +1,8 @@
-<section class="projects-section">
+<section class="projects-section" id="projects">
   <div class="container">
     <h2 class="section-title">Projects</h2>
 
-    <div class="swiper">
+    <div class="projects-swiper">
       <ul class="swiper-wrapper">
         <!-- Slide 1 -->
         <li class="swiper-slide">
@@ -25,15 +25,27 @@
               >
             </div>
             <div class="slide-right">
-              <img
-                srcset="
-                  ./img/project-1-image@1x.png 1x,
-                  ./img/project-1-image@2x.png 2x
-                "
-                src="./img/project-1-image@1x.png"
-                alt="Project Image"
-                class="slide-img"
-              />
+              <picture>
+                <source
+                  media="(min-width: 767px)"
+                  srcset="
+                    img/project-1-image-big@1x.png 1x,
+                    img/project-1-image-big@2x.png 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    img/project-1-image@1x.png 1x,
+                    img/project-1-image@2x.png 2x
+                  "
+                />
+                <img
+                  src="img/project-1-image@1x.png"
+                  alt="Project Image"
+                  class="slide-img"
+                />
+              </picture>
             </div>
           </div>
         </li>
@@ -59,15 +71,27 @@
               >
             </div>
             <div class="slide-right">
-              <img
-                srcset="
-                  ./img/project-2-image@1x.png 1x,
-                  ./img/project-2-image@2x.png 2x
-                "
-                src="./img/project-2-image@1x.png"
-                alt="Project Image"
-                class="slide-img"
-              />
+              <picture>
+                <source
+                  media="(min-width: 767px)"
+                  srcset="
+                    img/project-2-image-big@1x.png 1x,
+                    img/project-2-image-big@2x.png 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    img/project-2-image@1x.png 1x,
+                    img/project-2-image@2x.png 2x
+                  "
+                />
+                <img
+                  src="img/project-2-image@1x.png"
+                  alt="Project Image"
+                  class="slide-img"
+                />
+              </picture>
             </div>
           </div>
         </li>
@@ -93,15 +117,27 @@
               >
             </div>
             <div class="slide-right">
-              <img
-                srcset="
-                  ./img/project-3-image@1x.png 1x,
-                  ./img/project-3-image@2x.png 2x
-                "
-                src="./img/project-3-image@1x.png 1x"
-                alt="Project Image"
-                class="slide-img"
-              />
+              <picture>
+                <source
+                  media="(min-width: 767px)"
+                  srcset="
+                    img/project-3-image-big@1x.png 1x,
+                    img/project-3-image-big@2x.png 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    img/project-3-image@1x.png 1x,
+                    img/project-3-image@2x.png 2x
+                  "
+                />
+                <img
+                  src="img/project-3-image@1x.png"
+                  alt="Project Image"
+                  class="slide-img"
+                />
+              </picture>
             </div>
           </div>
         </li>
@@ -129,7 +165,3 @@
     </div>
   </div>
 </section>
-
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script type="module" src="./js/projects.js"></script>
