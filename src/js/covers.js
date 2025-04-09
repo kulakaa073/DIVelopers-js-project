@@ -2,14 +2,15 @@ import renderSlides from './covers-render-slides.js';
 
 renderSlides();
 
-const carousel = document.querySelector('.carousel');
-const allCarousels = document.querySelectorAll('.carousel');
-const duration =
-  parseFloat(window.getComputedStyle(carousel).transitionDuration) * 1000;
 const intervals = [];
 
+const carousel = document.querySelector('.carousel');
+const allCarousels = Array.from(document.querySelectorAll('.carousel'));
+const duration =
+  parseFloat(window.getComputedStyle(carousel).transitionDuration) * 1000;
+
 function updateCarouselDimensions() {
-  Array.from(allCarousels).forEach(carousel => {
+  allCarousels.forEach(carousel => {
     carousel.style.transitionDuration = '0s';
     carousel.style.transform = 'translateX(0px)';
   });
@@ -46,7 +47,7 @@ function updateCarouselDimensions() {
     };
   }
 
-  function fromStatToEnd(carousel, duration) {
+  function fromStartToEnd(carousel) {
     let move = moveCarousel(carousel);
 
     window.requestAnimationFrame(() => {
@@ -60,7 +61,7 @@ function updateCarouselDimensions() {
     intervals.push(interval);
   }
 
-  function fromEndToStart(carousel, duration) {
+  function fromEndToStart(carousel) {
     let move = moveCarousel(carousel);
 
     carousel.style.transitionDuration = `0s`;
@@ -77,12 +78,6 @@ function updateCarouselDimensions() {
     intervals.push(interval);
   }
 
-  const carouselFromStart1 = document.querySelector('.carousel-from-start-1');
-  const carouselFromStart2 = document.querySelector('.carousel-from-start-2');
-  const carouselFromStart3 = document.querySelector('.carousel-from-start-3');
-  const carouselFromEnd1 = document.querySelector('.carousel-from-end-1');
-  const carouselFromEnd2 = document.querySelector('.carousel-from-end-2');
-
   const options = {
     root: null,
     rootMargin: '0px',
@@ -93,11 +88,13 @@ function updateCarouselDimensions() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         window.requestAnimationFrame(() => {
-          fromStatToEnd(carouselFromStart1, duration);
-          fromStatToEnd(carouselFromStart2, duration);
-          fromStatToEnd(carouselFromStart3, duration);
-          fromEndToStart(carouselFromEnd1, duration);
-          fromEndToStart(carouselFromEnd2, duration);
+          allCarousels.forEach(carousel => {
+            if (carousel.classList.contains('carousel-from-start')) {
+              fromStartToEnd(carousel);
+            } else {
+              fromEndToStart(carousel);
+            }
+          });
         });
 
         observer.unobserve(entry.target);
