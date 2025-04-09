@@ -1,4 +1,5 @@
 @import 'node_modules/modern-normalize/modern-normalize.css';
+@import '../assets/fonts/intertight-variablefont_wght-webfont.woff2';
 
 :root {
   /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
@@ -19,11 +20,10 @@
 
 @font-face {
   font-family: 'Inter Tight';
-  src: url('../fonts/intertight-variablefont_wght-webfont.woff2')
+  src: url('./assets/fonts/intertight-variablefont_wght-webfont.woff2')
     format('woff2');
   font-weight: 100 900;
   font-style: normal;
-  font-display: swap;
 }
 
 html {
