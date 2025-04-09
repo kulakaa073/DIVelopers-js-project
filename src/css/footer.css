@@ -151,16 +151,16 @@
     width: 390px;
   }
 }
-.email-label {
+.form-label-wrap {
   position: relative;
   margin-bottom: 16px;
 }
 
 @media only screen and (min-width: 768px) {
-  .email-label {
+  .form-label-wrap {
     margin-right: 32px;
   }
-  .email-label {
+  .form-label-wrap {
     margin-bottom: 0;
   }
 }
@@ -187,17 +187,17 @@
   top: 44px;
   display: none;
 }
-.footer-comments {
+.form-label-wrap:has(.footer-comments) {
   margin-bottom: 32px;
 }
 @media only screen and (min-width: 768px) {
-  .footer-comments {
+  .form-label-wrap:has(.footer-comments) {
     margin-right: 32px;
     margin-bottom: 0;
   }
 }
 @media only screen and (min-width: 1440px) {
-  .footer-comments {
+  .form-label-wrap:has(.footer-comments) {
     margin-right: 86px;
   }
 }
