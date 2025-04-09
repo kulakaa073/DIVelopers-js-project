@@ -1,6 +1,7 @@
 .no-scroll {
   overflow: hidden;
 }
+
 .footer {
   position: relative;
   padding-bottom: 32px;
@@ -43,6 +44,13 @@
   position: relative;
   z-index: 2;
 }
+
+@media only screen and (min-width: 1440px) {
+  .footer-container {
+    padding: 0 196px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .footer {
     padding-bottom: 169px;
@@ -52,18 +60,26 @@
 
 .footer-p {
   display: inline;
-  gap: 10px;
+  vertical-align: middle;
   font-weight: 500;
   font-size: 40px;
   line-height: 1;
   letter-spacing: -0.03em;
   color: #fafafa;
   font-family: 'Inter Tight', sans-serif;
-  margin-bottom: 63px;
 }
 @media only screen and (min-width: 768px) {
   .footer-p {
     font-size: 64px;
+  }
+}
+
+.footer-img-text {
+  margin-bottom: 63px;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-img-text {
     margin-bottom: 18px;
   }
 }
@@ -72,10 +88,12 @@
 }
 .footer-icon {
   display: inline;
+  vertical-align: middle;
   width: 44px;
   height: 44px;
   border-radius: 12px;
 }
+
 @media only screen and (min-width: 768px) {
   .footer-icon {
     width: 70px;
@@ -98,6 +116,7 @@
   }
 }
 .footer-input {
+  outline: none;
   box-sizing: border-box;
   background-color: transparent;
   white-space: nowrap;
@@ -132,22 +151,20 @@
     width: 390px;
   }
 }
-.footer-div {
+.email-label {
   position: relative;
-}
-
-.footer-div input:first-child {
   margin-bottom: 16px;
 }
 
 @media only screen and (min-width: 768px) {
-  .footer-div {
+  .email-label {
     margin-right: 32px;
   }
-  .footer-div input:first-child {
+  .email-label {
     margin-bottom: 0;
   }
 }
+
 .footer-succes {
   font-weight: 500;
   font-size: 14px;
@@ -156,7 +173,7 @@
   color: #3cbc81;
   font-family: 'Inter Tight', sans-serif;
   position: absolute;
-  top: 48px;
+  top: 44px;
   display: none;
 }
 .footer-invalid-email {
@@ -167,7 +184,7 @@
   color: #e74a3b;
   font-family: 'Inter Tight', sans-serif;
   position: absolute;
-  top: 48px;
+  top: 44px;
   display: none;
 }
 .footer-comments {
@@ -224,28 +241,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
-  padding: 10px 12px;
 }
 .footer-address-li:hover {
   border: 1px solid #fafafa;
 }
-@media only screen and (min-width: 768px) {
-  .footer-address-li {
-    padding: 18px 32px;
-  }
-}
+
 .footer-address-li-a {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
   color: #fafafa;
   font-family: 'Inter Tight', sans-serif;
+  padding: 10px 12px;
 }
 @media only screen and (min-width: 768px) {
   .footer-address-li-a {
     font-size: 16px;
+    padding: 18px 32px;
   }
 }
 .footer-modal-window {
