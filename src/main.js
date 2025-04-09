@@ -7,5 +7,3 @@ import './js/faq.js';
 import './js/covers.js';
 import './js/reviews.js';
 import './js/footer.js';
-
-import './assets/fonts/intertight-variablefont_wght-webfont.woff2';
