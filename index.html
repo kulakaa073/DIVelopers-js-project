@@ -10,6 +10,7 @@
       sizes="any"
       type="image/svg+xml"
     />
+
     <link
       rel="preload"
       fetchpriority="high"
@@ -17,10 +18,16 @@
       href="/DIVelopers-js-project/assets/hero-cover-blue-mobile@1x-Cz3UWojQ.png"
       type="image/png"
     />
+    <link
+      rel="preload"
+      as="font"
+      href="./fonts/InterTight-VariableFont_wght.ttf"
+      type="font/truetype"
+    />
     <script type="module" crossorigin src="/DIVelopers-js-project/index.js"></script>
     <link rel="modulepreload" crossorigin href="/DIVelopers-js-project/assets/vendor-CkB2Yy-u.js">
     <link rel="stylesheet" crossorigin href="/DIVelopers-js-project/assets/vendor-BeNFBzCw.css">
-    <link rel="stylesheet" crossorigin href="/DIVelopers-js-project/assets/index-Czb85BxC.css">
+    <link rel="stylesheet" crossorigin href="/DIVelopers-js-project/assets/index-BucznG_1.css">
   </head>
   <body>
     <!--Header-->
@@ -89,7 +96,7 @@
     <main>
       <!-- Hero section-->
 <section class="hero" id="hero">
-  <div class="container hero-container">
+  <div class="container">
     <h1 class="hero-title">
       Hello. <br />I'm Fullstack developer Lloyd Jefferson.
     </h1>
@@ -626,8 +633,8 @@
 
       <li class="faq-acc-item ac">
         <h3 class="faq-acc-header ac-header ac-trigger">
-          What does the process of developing a software <br />
-          product look like from idea to implementation?
+          What does the process of developing a software product look like from
+          idea to implementation?
           <button type="button" class="faq-acc-button">
             <svg
               class="faq-acc-icon"
@@ -702,22 +709,20 @@
     </div>
 
     <form class="footer-form">
-      <div class="footer-div">
-        <label>
-          <input
-            class="footer-input-email footer-input"
-            type="email"
-            name="email"
-            id="email"
-            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-            placeholder="clients@gmail.com"
-            autocomplete="email"
-            required
-          />
-        </label>
+      <label class="email-label">
+        <input
+          class="footer-input-email footer-input"
+          type="email"
+          name="email"
+          id="email"
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+          placeholder="clients@gmail.com"
+          autocomplete="email"
+          required
+        />
         <p class="footer-succes">Succes!</p>
         <p class="footer-invalid-email">Invalid email, try again</p>
-      </div>
+      </label>
       <label class="footer-comments">
         <input
           class="footer-input-comment footer-input"
