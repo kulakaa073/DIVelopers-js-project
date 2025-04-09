@@ -3,11 +3,17 @@ import renderSlides from './covers-render-slides.js';
 renderSlides();
 
 const carousel = document.querySelector('.carousel');
+const allCarousels = document.querySelectorAll('.carousel');
 const duration =
   parseFloat(window.getComputedStyle(carousel).transitionDuration) * 1000;
 const intervals = [];
 
 function updateCarouselDimensions() {
+  Array.from(allCarousels).forEach(carousel => {
+    carousel.style.transitionDuration = '0s';
+    carousel.style.transform = 'translateX(0px)';
+  });
+
   const slides = carousel.children;
   const container = document.querySelector('.covers-container');
 
@@ -44,6 +50,7 @@ function updateCarouselDimensions() {
     let move = moveCarousel(carousel);
 
     window.requestAnimationFrame(() => {
+      carousel.style.transitionDuration = `${duration / 1000}s`;
       move();
     });
 
