@@ -1,45 +1,29 @@
 <footer class="footer">
   <div id="work-together" class="footer-container container">
-    <div class="footer-img-text">
-      <img
-        class="footer-icon"
-        srcset="/img/logo-image@1x.png 1x, /img/logo-image@2x.png 2x"
-        src="/img/logo-image@1x.png"
-        alt="logo"
-      />
-      <h2 class="footer-p">
-        LET'S <span class="footer-span">WORK</span> TOGETHER
-      </h2>
-    </div>
+    <h2 class="footer-img-text">
+      <img class="footer-icon" srcset="/img/logo-image@1x.png, /img/logo-image@2x.png" src="/img/logo-image@1x.png"
+        alt="logo" />LET'S <span class="footer-span">WORK</span>TOGETHER
+    </h2>
 
     <form class="footer-form">
       <div class="footer-div">
         <label>
-          <input
-            class="footer-input-email footer-input"
-            type="email"
-            name="email"
-            id="email"
-            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-            placeholder="clients@gmail.com"
+          <input class="footer-input-email footer-input" type="email" name="email" id="email"
+            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" 
+            placeholder="clients@gmail.com" 
             autocomplete="email"
-            required
+            required 
           />
         </label>
         <p class="footer-succes">Succes!</p>
         <p class="footer-invalid-email">Invalid email, try again</p>
       </div>
-      <label class="footer-comments">
-        <input
-          class="footer-input-comment footer-input"
-          type="text"
-          name="comment"
-          id="comment"
-          placeholder="comments"
-          autocomplete="off"
-          required
-        />
-      </label>
+      <div class="footer-comments-div">
+        <label class="footer-comments">
+          <input class="footer-input-comment footer-input" type="text" name="comment" id="comment"
+            placeholder="comments" autocomplete="off" required />
+        </label>
+      </div>
       <button type="submit" class="footer-button">Send</button>
     </form>
 
@@ -47,16 +31,14 @@
       <ul class="footer-address-list">
         <li class="footer-address-li">
           <a class="footer-address-li-a" href="mailto:lloydjefferson@gmail.com"
-            >lloydjefferson@gmail.com</a
-          >
+            class="link">lloydjefferson@gmail.com</a>
         </li>
         <li class="footer-address-li">
-          <a class="footer-address-li-a" href="tel:+3801111111111"
-            >+380 11 1111 11 11</a
-          >
+          <a class="footer-address-li-a" href="tel:+3801111111111" class="link">+380 11 1111 11 11</a>
         </li>
       </ul>
     </address>
+
   </div>
 </footer>
 
@@ -64,15 +46,12 @@
   <div class="footer-modal">
     <button class="footer-close" type="button">
       <svg class="close-modal-icon">
-        <use href="./img/sprites.svg#icon-close-x"></use>
+        <use href="./img/icon-close-menu.svg#icon-close-menu"></use>
       </svg>
     </button>
-    <h3 class="footer-modal-text">
-      Thank you for your interest in cooperation!
-    </h3>
-    <p class="footer-modal-paragraph">
-      The manager will contact you shortly to discuss further details and
-      opportunities for cooperation. Please stay in touch.
-    </p>
+    <h2 class="footer-modal-text">Thank you for your interest in cooperation!</h2>
+    <p class="footer-modal-paragraph">The manager will contact you shortly to discuss further details and opportunities
+      for cooperation. Please stay in touch.</p>
   </div>
+
 </div>
