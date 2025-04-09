@@ -2,18 +2,16 @@
 <header class="header">
   <div class="container header-container">
     <nav class="header-nav">
-      <a class="header-nav-logo" href="./index.html">
+      <a class="header-nav-logo" href="./">
         <img
           class="header-logo-icon logo-icon-img"
-          srcset="/img/logo-image@1x.png, /img/logo-image@2x.png"
+          srcset="/img/logo-image@1x.png 1x, /img/logo-image@2x.png 2x"
           src="/img/logo-image@1x.png"
           alt="logo"
           width="80"
           height="80"
         />
-        <svg class="header-logo-icon logo-icon-text" width="84" height="19">
-          <use href="/img/sprites.svg#icon-logo"></use>
-        </svg>
+        <p class="header-logo-text">jefferson*</p>
       </a>
       <div class="menu-container">
         <button type="button" class="menu-btn">Menu</button>
@@ -22,38 +20,43 @@
             <li><a href="#about" class="nav-link">About me</a></li>
             <li><a href="#benefits" class="nav-link">Benefits</a></li>
             <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#faq" class="nav-link">FAQ</a></li>
+            <li><a href="#id-faq" class="nav-link">FAQ</a></li>
           </ul>
         </div>
       </div>
     </nav>
     <a class="order-btn" href="#work-together">Order the project</a>
 
-    <button id="openModal" class="header-burger-btn" type="button">
+    <button
+      id="openModal"
+      class="header-burger-btn"
+      type="button"
+      aria-label="Navigation menu"
+    >
       <svg class="header-burger-btn-icon" width="28" height="28">
         <use href="/img/sprites.svg#icon-burger-menu"></use>
       </svg>
     </button>
   </div>
-  <!--Modal-menu-->
-
-  <div class="modal-menu">
-    <button class="close-modal-menu" type="button">
-      <svg class="close-modal-icon" width="28" height="28">
-        <use href="/img/icon-close-menu.svg#icon-close-menu"></use>
-      </svg>
-    </button>
-
-    <div class="modal-submenu">
-      <nav class="modal-nav">
-        <ul class="modal-nav-list">
-          <li><a href="#about" class="modal-nav-link">About me</a></li>
-          <li><a href="#benefits" class="modal-nav-link">Benefits</a></li>
-          <li><a href="#projects" class="modal-nav-link">Projects</a></li>
-          <li><a href="#faq" class="modal-nav-link">FAQ</a></li>
-        </ul>
-      </nav>
-      <a class="modal-order-btn" href="#work-together">Order the project</a>
-    </div>
-  </div>
 </header>
+
+<!--Modal-menu-->
+<div class="modal-menu">
+  <button class="close-modal-menu" type="button" aria-label="Close menu">
+    <svg class="close-menu-icon" width="28" height="28">
+      <use href="/img/sprites.svg#icon-close-x"></use>
+    </svg>
+  </button>
+
+  <div class="modal-submenu">
+    <nav class="modal-nav">
+      <ul class="modal-nav-list">
+        <li><a href="#about" class="modal-nav-link">About me</a></li>
+        <li><a href="#benefits" class="modal-nav-link">Benefits</a></li>
+        <li><a href="#projects" class="modal-nav-link">Projects</a></li>
+        <li><a href="#id-faq" class="modal-nav-link">FAQ</a></li>
+      </ul>
+    </nav>
+    <a class="modal-order-btn" href="#work-together">Order the project</a>
+  </div>
+</div>
