@@ -60,8 +60,8 @@
 
 @media screen and (min-width: 1440px) {
   .hero-title {
-    font-size: 90px;
-    margin-bottom: 243px;
+    max-width: 1085px;
+    margin: 0 auto 243px;
   }
 }
 
