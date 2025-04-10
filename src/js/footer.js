@@ -10,32 +10,29 @@ const commentInput = form.querySelector(".footer-input-comment");
 const successMessage = document.querySelector('.footer-succes');
 const errorMessage = document.querySelector('.footer-invalid-email');
 
-
 function isValidEmail(email) {
   const emailRegex = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
   return emailRegex.test(email);
 }
-
 
 emailInput.addEventListener('input', () => {
   const email = emailInput.value.trim();
 
   if (email === '') {
     successMessage.style.display = 'none';
-      errorMessage.style.display = 'none';
-      emailInput.style.borderColor = 'rgba(250, 250, 250, 0.6)';
-      
+    errorMessage.style.display = 'none';
+    emailInput.style.borderColor = 'rgba(250, 250, 250, 0.6)';
     return;
   }
 
   if (isValidEmail(email)) {
-      successMessage.style.display = 'block';
-      emailInput.style.borderColor = '#3cbc81';
-      errorMessage.style.display = 'none';
+    successMessage.style.display = 'block';
+    emailInput.style.borderColor = '#3cbc81';
+    errorMessage.style.display = 'none';
   } else {
     successMessage.style.display = 'none';
-      errorMessage.style.display = 'block';
-      emailInput.style.borderColor = '#e74a3b';
+    errorMessage.style.display = 'block';
+    emailInput.style.borderColor = '#e74a3b';
   }
 });
 
@@ -47,14 +44,14 @@ form.addEventListener('submit', async (e) => {
 
   if (!isValidEmail(email)) {
     successMessage.style.display = 'none';
-      errorMessage.style.display = 'block';
-      emailInput.style.borderColor = '#e74a3b';
+    errorMessage.style.display = 'block';
+    emailInput.style.borderColor = '#e74a3b';
     return;
   }
 
   successMessage.style.display = 'none';
-    errorMessage.style.display = 'none';
-    emailInput.style.borderColor = 'rgba(250, 250, 250, 0.6)';
+  errorMessage.style.display = 'none';
+  emailInput.style.borderColor = 'rgba(250, 250, 250, 0.6)';
 
   const formData = { email, comment };
 
@@ -70,8 +67,7 @@ form.addEventListener('submit', async (e) => {
       throw new Error(errorData.message || 'Something went wrong');
     }
 
-    modalWindow.classList.add('is-visible');
-    document.body.classList.add('no-scroll');
+    openModal();
     form.reset();
   } catch (error) {
     iziToast.show({
@@ -84,9 +80,14 @@ form.addEventListener('submit', async (e) => {
   }
 });
 
+function openModal() {
+  modalWindow.classList.add('is-visible');
+  document.body.style.overflow = 'hidden';
+}
+
 function closeModal() {
   modalWindow.classList.remove('is-visible');
-  document.body.classList.remove('no-scroll');
+  document.body.style.overflow = '';
 }
 
 closeModalBtn.addEventListener('click', closeModal);
