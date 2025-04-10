@@ -54,7 +54,7 @@ const imageAddresses = [
 const slides = imageAddresses
   .map(({ x1, x2, alt }) => {
     return `<li class="slide">
-    <img src=${x1} srcset="${x1} 1x, ${x2} 2x" alt="${alt}"/>
+    <img src=${x1} srcset="${x1} 1x, ${x2} 2x" alt="${alt}" loading="lazy"/>
   </li>`;
   })
   .join('');

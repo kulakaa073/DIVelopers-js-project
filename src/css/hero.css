@@ -1,43 +1,41 @@
-.hero-container {
-  position: relative;
+.hero {
   padding-top: 281px;
-  padding-bottom: 281px;
+  padding-bottom: 32px;
   background-image: url(../img/hero-cover-blue-mobile@1x.png);
-  background-position: right 65px top;
+  background-position: calc(50% - 375px / 2 + 310px / 2) 0;
   background-size: auto 100%;
   background-repeat: no-repeat;
 }
 
 @media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .hero-container {
+  .hero {
     background-image: url(../img/hero-cover-blue-mobile@2x.png);
   }
 }
 
 @media screen and (min-width: 768px) {
-  .hero-container {
+  .hero {
     padding-top: 300px;
-    padding-bottom: 274px;
     background-image: url(../img/hero-cover-blue-tablet@1x.png);
-    background-position: right 187px top;
+    background-position: calc(50% - 768px / 2 + 581px / 2) 0;
   }
 
   @media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    .hero-container {
+    .hero {
       background-image: url(../img/hero-cover-blue-tablet@2x.png);
     }
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .hero-container {
-    padding: 300px 178px 330px;
+  .hero {
+    padding-top: 300px;
     background-image: url(../img/hero-cover-blue@1x.png);
-    background-position: left top;
+    background-position: calc(50% - 1440px / 2 + 728px / 2) 0;
   }
 
   @media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    .hero-container {
+    .hero {
       background-image: url(../img/hero-cover-blue@2x.png);
     }
   }
@@ -50,26 +48,33 @@
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fafafa;
+  margin-bottom: 212px;
 }
 
 @media screen and (min-width: 768px) {
   .hero-title {
     font-size: 90px;
+    margin-bottom: 187px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero-title {
+    max-width: 1085px;
+    margin: 0 auto 243px;
   }
 }
 
 .socials {
-  position: absolute;
   display: flex;
   flex-direction: row;
   gap: 4px;
-  bottom: 32px;
+  justify-content: right;
 }
 
 @media screen and (min-width: 768px) {
   .socials {
     gap: 8px;
-    right: 32px;
   }
 }
 
