@@ -7,7 +7,6 @@
   background-position: left 290px top;
   background-size: auto 100%;
   background-repeat: no-repeat;
-  
 }
 
 @media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -81,7 +80,6 @@
   letter-spacing: -0.03em;
   color: #fafafa;
   font-family: 'Inter Tight', sans-serif;
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -249,12 +247,6 @@
 
 .footer-address-li:hover {
   border: 1px solid #fafafa;
-}
-
-@media only screen and (min-width: 768px) {
-  .footer-address-li {
-    padding: 18px 32px;
-  }
 }
 
 .footer-address-li-a {
